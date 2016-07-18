@@ -26,9 +26,9 @@ class PlayingMovieSpider(Spider):
         for selector in selectors:
             item = MovieItem()
             item["mid"] = selector.xpath('@id')[0].extract()
-            item["name"] = selector.xpath('@data-title')[0].extract()
+            item["name"] = selector.xpath('@data-title')[0].extract().encode('utf-8')
             item["score"] = selector.xpath('@data-score')[0].extract()
             item["star"] = selector.xpath('@data-star')[0].extract()
-            item["region"] = selector.xpath('@data-region')[0].extract()
+            item["region"] = selector.xpath('@data-region')[0].extract().encode('utf-8')
 
             yield item

@@ -15,5 +15,5 @@
 在`douban_movie`目录下面，跑命令：
 
 ```python
-scrapy crawl douban_movie
+scrapy crawl now_playing_movie
 ```

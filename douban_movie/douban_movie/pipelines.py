@@ -27,7 +27,7 @@ class MoviePipeline(object):
     def process_item(self, item, spider):
         movie = Movie(id=int(item["mid"]),
                       name=item["name"],
-                      score=float(item["score"]),
+                      score=float(item["score"]) if item["score"] != "" else 0.0,
                       star=int(item["star"]),
                       region=item["region"],
                       crawl_time=datetime.utcnow())
