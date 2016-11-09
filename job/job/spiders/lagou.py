@@ -102,7 +102,8 @@ class LagouJobSpider(Spider):
 
     def parse(self, response):
         # 获取当前页面的position_id
-        m_id = re.match(r"http://www.lagou.com/jobs/(\d+).html", response.url)
+        # TODO 更好的正则，或者去掉后面部分可以不?
+        m_id = re.match(r"https://www.lagou.com/jobs/(\d+).html", response.url)
         pipe = JobPipeline()
         if m_id:
             position_id = int(m_id.group(1))

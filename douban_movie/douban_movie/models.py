@@ -11,7 +11,7 @@ from douban_movie.settings import DATABASE
 
 Base = declarative_base()
 
-mysql_url = "mysql://{username}:{password}@{host}:{port}/{database}".format(
+mysql_url = "mysql://{username}:{password}@{host}:{port}/{database}?charset=utf8".format(
     username=DATABASE["username"],
     password=DATABASE["password"],
     host=DATABASE["host"],
