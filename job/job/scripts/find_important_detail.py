@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+job.scripts.find_import_detail
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+对职位的详细描述做分词，对关键词的次数排序
+"""
 
 import MySQLdb
 import jieba
